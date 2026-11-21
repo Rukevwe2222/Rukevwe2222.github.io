@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OKUSE RUKEVWE EFE | Geopolitical & Supply Chain Risk Analyst</title>
+  <style>
+    :root {
+      --bg: #0b1120;
+      --card: #111827;
+      --border: #1f2937;
+      --text: #f3f4f6;
+      --muted: #9ca3af;
+      --accent: #38bdf8;
+      --high: #ef4444;
+      --med: #f59e0b;
+      --low: #10b981;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+    .container { max-width: 960px; margin: 0 auto; }
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 2rem;
+      margin-bottom: 2.5rem;
+    }
+    .tag {
+      display: inline-block;
+      background: rgba(56, 189, 248, 0.12);
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      margin-bottom: 0.75rem;
+    }
+    h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
+    .subtitle { color: var(--accent); font-weight: 500; margin-bottom: 1rem; }
+    .bio { color: var(--muted); max-width: 780px; margin-bottom: 1.5rem; }
+    .btn-group { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+    .btn {
+      text-decoration: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    .btn-primary { background: var(--accent); color: #0b1120; }
+    .btn-outline { border: 1px solid var(--border); color: var(--text); }
+    section { margin-bottom: 3rem; }
+    h2 { font-size: 1.4rem; margin-bottom: 1rem; border-left: 3px solid var(--accent); padding-left: 0.75rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.25rem;
+    }
+    .card h3 { font-size: 1.05rem; margin-bottom: 0.5rem; }
+    .card p { color: var(--muted); font-size: 0.9rem; margin-bottom: 0.75rem; }
+    .filter-bar { display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap; }
+    .filter-btn {
+      background: var(--card);
+      color: var(--text);
+      border: 1px solid var(--border);
+      padding: 0.4rem 0.9rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.85rem;
+    }
+    .filter-btn.active { border-color: var(--accent); color: var(--accent); }
+    table { width: 100%; border-collapse: collapse; background: var(--card); border-radius: 10px; overflow: hidden; }
+    th, td { text-align: left; padding: 0.85rem 1rem; border-bottom: 1px solid var(--border); font-size: 0.9rem; }
+    th { color: var(--muted); font-weight: 600; background: #0f172a; }
+    .badge { padding: 0.2rem 0.55rem; border-radius: 4px; font-size: 0.75rem; font-weight: 700; }
+    .high { background: rgba(239, 68, 68, 0.15); color: var(--high); }
+    .med { background: rgba(245, 158, 11, 0.15); color: var(--med); }
+    .low { background: rgba(16, 185, 129, 0.15); color: var(--low); }
+    footer { text-align: center; color: var(--muted); font-size: 0.85rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <span class="tag">Available for Risk, OSINT & Policy Roles</span>
+      <h1>OKUSE RUKEVWE EFE</h1>
+      <p class="subtitle">International Relations & Supply Chain Risk Analyst | West African Trade, Energy & Sanctions | OSINT & Civic Web Developer</p>
+      <p class="bio">
+        I am an International Relations and Supply Chain Risk Analyst specializing in West African trade, energy security, and sanctions compliance. Bridging geopolitical intelligence with technical execution, I use open-source intelligence (OSINT) and rigorous policy research to track regional disruptions, evaluate regulatory exposure, and build accessible web tools for mission-driven organizations.
+      </p>
+      <div class="btn-group">
+        <a href="#monitor" class="btn btn-primary">Explore Risk Monitor</a>
+        <a href="#briefs" class="btn btn-outline">Read Policy Briefs</a>
+        <a href="https://linkedin.com" target="_blank" class="btn btn-outline">LinkedIn Profile</a>
+      </div>
+    </header>
+
+    <section id="monitor">
+      <h2>Interactive Project: West Africa Trade & Sanctions Risk Monitor</h2>
+      <p style="color: var(--muted); font-size: 0.9rem; margin-bottom: 1rem;">
+        Filter regional corridors and sectors below to inspect current geopolitical, maritime, and regulatory exposure.
+      </p>
+      <div class="filter-bar">
+        <button class="filter-btn active" onclick="filterTable('all', this)">All Sectors</button>
+        <button class="filter-btn" onclick="filterTable('Energy', this)">Energy</button>
+        <button class="filter-btn" onclick="filterTable('Trade', this)">Trade & Ports</button>
+        <button class="filter-btn" onclick="filterTable('Sanctions', this)">Sanctions</button>
+      </div>
+      <table id="riskTable">
+        <thead>
+          <tr>
+            <th>Corridor / Node</th>
+            <th>Sector</th>
+            <th>Risk Level</th>
+            <th>OSINT & Policy Assessment</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-sector="Trade">
+            <td><strong>Lagos–Abidjan Corridor</strong></td>
+            <td>Trade</td>
+            <td><span class="badge med">MODERATE</span></td>
+            <td>Border customs friction and FX volatility impacting cross-border transit times.</td>
+          </tr>
+          <tr data-sector="Energy">
+            <td><strong>Gulf of Guinea Offshore</strong></td>
+            <td>Energy</td>
+            <td><span class="badge high">HIGH</span></td>
+            <td>Elevated vessel spoofing (AIS manipulation) and crude theft surveillance requirements.</td>
+          </tr>
+          <tr data-sector="Sanctions">
+            <td><strong>Sahel Transit & Gold/Uranium Routes</strong></td>
+            <td>Sanctions</td>
+            <td><span class="badge high">HIGH</span></td>
+            <td>Shifting ECOWAS/AES regulatory regimes requiring enhanced counterparty due diligence.</td>
+          </tr>
+          <tr data-sector="Trade">
+            <td><strong>Tema & Lekki Deep Sea Ports</strong></td>
+            <td>Trade</td>
+            <td><span class="badge low">STABLE</span></td>
+            <td>Expanding container capacity easing regional congestion; monitor tariff adjustments.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="briefs">
+      <h2>Selected Policy Briefs & OSINT Case Studies</h2>
+      <div class="grid">
+        <div class="card">
+          <span class="tag">Policy Brief</span>
+          <h3>ECOWAS–AES Split: Supply Chain Implications for Coastal Ports</h3>
+          <p>Analysis of how landlocked Sahelian trade redirection affects port volumes in Cotonou, Lomé, and Lagos.</p>
+          <a href="#" class="btn btn-outline" style="font-size: 0.8rem;">Add PDF / Article Link</a>
+        </div>
+        <div class="card">
+          <span class="tag">OSINT Investigation</span>
+          <h3>Tracking Dark Fleet Tanker Activity in West African Waters</h3>
+          <p>Open-source methodology combining AIS maritime data and corporate registry checks to flag sanctions exposure.</p>
+          <a href="#" class="btn btn-outline" style="font-size: 0.8rem;">Add Case Study Link</a>
+        </div>
+        <div class="card">
+          <span class="tag">Non-Profit Web Build</span>
+          <h3>Civic Policy & Resource Hub</h3>
+          <p>Responsive, lightweight web portal built to help local advocacy groups publish research and mobilize donors.</p>
+          <a href="#" class="btn btn-outline" style="font-size: 0.8rem;">View Live Demo</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Built by Your Full Name &bull; Open to Opportunities in Geopolitical Risk, OSINT & Non-Profit Tech</p>
+    </footer>
+  </div>
+
+  <script>
+    function filterTable(sector, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('#riskTable tbody tr').forEach(row => {
+        row.style.display = (sector === 'all' || row.dataset.sector === sector) ? '' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>
+
+
+
